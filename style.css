@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(templatemo_background.jpg) top center no-repeat;
+}
+
+.calculator{
+    background: url(xmocb160300049.jpg) top center;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px 5px rgba(82, 81, 81, 0.6);
+}
+
+/* Display */
+.calculator-display {
+background: rgb(46, 46, 46);
+color: white;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1 {
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Rye', cursive, sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Buttons */
+
+  .calculator-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      padding: 10px;
+  }
+
+  button {
+      min-height: 100px;
+      font-size: 20px;
+      font-weight: 100;
+      font-family: 'Rye', cursive, sans-serif;
+      border: none;
+      border-radius: 300px;
+      cursor: pointer;
+      background: linear-gradient(#eecc6d, #b6922e);
+      box-shadow: 5px 5px 5px 1px rgb(0, 0, 0, 0.6);
+  }
+
+  button:hover {
+      filter: brightness(110%);
+  }
+
+  .operator {
+      background: rgb(196, 144, 86);
+      color: black;
+      font-size: 30px;
+  }
+
+  .clear {
+      background: rgb(126, 58, 58);
+      color: black;
+  }
+
+  .clear:hover{
+      filter:brightness(80%);
+  }
+
+  button:active {
+      transform: translateY(5px);
+  }
+
+  button:focus {
+      outline: none;
+  }
+
+
+  .equal-sign {
+      grid-column: -2;
+      grid-row: 2 / span 4;
+      background: rgb(167, 88, 52);
+  }
+
+  /* Media Query */
+
+  @media screen and (max-width: 600px) {
+      .calculator {
+          width: 95%;
+      }
+  }
